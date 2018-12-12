@@ -30,7 +30,7 @@ judge(){
 
     while true
     do   
-        echo -e '\n'
+        line
         read -p "请输入命令名称（输入？获取帮助信息）："  a 
 
         case $a in
