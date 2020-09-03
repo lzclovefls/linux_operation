@@ -11,9 +11,9 @@ password=tLeKLXGe8kKTHMhf  #密码
 backup_dir=${backup_dir}/${dbnmae}
 
 #判断如果该目录不存在就递归创建
-if [ ! -d $backup_dir ]
+if [ ! -d "$backup_dir" ]
 then
-    mkdir -p  $backup_dir
+    mkdir -p  "$backup_dir"
 fi
 
 #数据库备份
