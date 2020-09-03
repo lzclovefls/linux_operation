@@ -8,13 +8,15 @@ username=xiaoshuo          #用户名
 password=tLeKLXGe8kKTHMhf  #密码
 
 #对应数据库备份所在文件夹路径
-backup_dir=${backup_dir}/${dbnmae}
+backup_dir="${dir}/${dbname}"
 
 #判断如果该目录不存在就递归创建
-if [ ! -d "$backup_dir" ]
+if [ ! -d  ${backup_dir} ]
 then
-    mkdir -p  "$backup_dir"
+    mkdir -p  ${backup_dir}
+
 fi
+
 
 #数据库备份
 mysqldump -u${username} -p${password} ${dbname} | xz > ${backup_dir}/$(date +%Y%m%d_%H%M%S).sql.xz
